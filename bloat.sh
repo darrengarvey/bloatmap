@@ -12,7 +12,7 @@ mkdir $scratchdir
 nm -C -S -l "$binary_or_lib" > $scratchdir/nm.out
 objdump -h "$binary_or_lib" > $scratchdir/objdump.out
 
-./bloat/bloat.py \
+${where_am_i}/bloat/bloat.py \
     --strip-prefix="$prefix" \
     --nm-output=$scratchdir/nm.out \
     --objdump-output=$scratchdir/objdump.out \
